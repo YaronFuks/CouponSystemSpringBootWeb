@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+      .body {
+          font-family: "Courier New", Courier, monospace;
+          position: relative;
+  width: 400px;
+  height: 380px;
+  border: 3px solid rgb(53, 1, 77);
+           margin: auto;
+          width: auto;
+          position: absolute;
+ /* top: 40px;
+  left: 240px;*/
+          padding: 10px; 
+          border: 4px solid cadetblue;
+          background-color: rgb(255, 255, 255);
+      }
+
+     body {
+ background-image: url("store_back2.jpg");
+ background-color: #cccccc;
+}
+      </style>
+
+  <script>
+    $(document).ready(function () {
+      $("button1").click(function () {
+        $("div1").slideToggle(1000);
+
+      });
+      
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button2").click(function () {
+        $("div2").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button3").click(function () {
+        $("div3").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button4").click(function () {
+        $("div4").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button5").click(function () {
+        $("div5").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button6").click(function () {
+        $("div6").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button7").click(function () {
+        $("div7").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button8").click(function () {
+        $("div8").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button9").click(function () {
+        $("div9").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button10").click(function () {
+        $("div10").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+  
+function updateCompanyA() {
+    alert("Company Was Updated Successfully!");
+}
+  
+function createCompanyA() {
+    alert("Company Was Created Successfully!");
+}
+
+function deleteCompanyA() {
+    alert("Company Was Deleted Successfully!");
+}
+
+ 
+ function updateCustomerA() {
+    alert("Customer Was Updated Successfully!");
+}
+  
+function createCustomerA() {
+    alert("Customer Was Created Successfully!");
+}
+
+function deleteCustomerA() {
+    alert("Customer Was Deleted Successfully!");
+}
+  </script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  
+
+  
+  <title>Admin Console</title>
+  <style>
+    div.c {
+      position: absolute;
+      right: 30px;
+    }
+  </style>
+</head>
+
+
+<div class="container-fluid">
+  <div class="navbar-header">
+  </div>
+
+  <div class="collapse navbar-collapse">
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" ><img src="icon.png"></a>
+    <ul class="navbar-nav">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Company Services
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <button1>Create Company</button1>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button2>Update Company</button2>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button3>Delete Company</button3>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button4>Read Company</button4>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button5>Read All Companies</button5>
+          </a>
+
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Customer Services
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <button6>Create Customer</button6>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button7>Update Customer</button7>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button8>Delete Customer</button8>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button9>Read Customer</button9>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button10>Read All Customers</button10>
+          </a>
+
+        </div>
+      </li>
+      <div class="c">
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="AdminController/LogOut">Logout</a>
+
+        </li>
+      </div>
+    </ul>
+  </nav>
+
+
+
+  <div class="container-fluid" style="margin-top:80px">
+
+  </div>
+
+  <body>
+    <h3>Welcome Admin</h3>
+    Please Choose Your Options In The Navbar Above<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+
+
+    
+    <br>
+    <br>
+
+
+
+
+
+    <div1 id="hidden" style="display:none">
+      <h3>Create Company</h3>
+      <form action="AdminController/CreateCompany" method="post">
+        Company Name
+        <br>
+        <input type="text" name="compName">
+        <br>
+        <br> Password
+        <br>
+        <input type="text" name="password">
+        <br>
+        <br> Email
+        <br>
+        <input type="email" name="email">
+        <br>
+        <br>
+
+        <br>
+        <input type="submit" value="Create" class="btn btn-success" onclick="createCompanyA()"/>
+
+      </form>
+      <br>
+    </div1>
+
+
+
+
+
+    <div2 id="hidden" style="display:none">
+      <h3>Update Company</h3>
+      <form action="AdminController/UpdateCompany" method="get">
+        Company Id
+        <br>
+        <input type="text" name="id">
+        <br>
+        <br> Password
+        <br>
+        <input type="text" name="password">
+        <br>
+        <br> Email
+        <br>
+        <input type="email" name="email">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Update" class="btn btn-info" onclick="updateCompanyA()"/>
+        
+
+      </form>
+      <br>
+    </div2>
+
+
+
+    <div3 id="hidden" style="display:none">
+
+      <h3>Delete Company</h3>
+      <form action="AdminController/DeleteCompany" method="get">
+        Company Id
+        <br>
+        <input type="number" name="id">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Delete" class="btn btn-danger"  onclick="deleteCompanyA()"/>
+      </form>
+      <br>
+    </div3>
+
+
+
+
+
+
+    <div4 id="hidden" style="display:none">
+
+      <h3>Read Company</h3>
+      <form action="AdminController/ReadCompany" method="get">
+        Company Id
+        <br>
+        <input type="number" name="id">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Read" class="btn btn-success" />
+      </form>
+      <br>
+    </div4>
+
+
+
+
+
+    <div5 id="hidden" style="display:none">
+
+      <h3>Read All Companies</h3>
+      <form action="AdminController/ReadAllCompanies" method="get">
+        <br>
+        <br>
+        <input type="submit" value="Read All" class="btn btn-success" />
+      </form>
+      <br>
+    </div5>
+
+
+
+
+
+    <div6 id="hidden" style="display:none">
+
+      <h3>Create Customer</h3>
+      <form action="AdminController/CreateCustomer" method="post">
+        Customer Name
+        <br>
+        <input type="text" name="custName">
+        <br>
+        <br> Password
+        <br>
+        <input type="text" name="password">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Create" class="btn btn-success" onclick="createCustomerA()"/>
+      </form>
+      <br>
+    </div6>
+
+
+
+
+
+
+    <div7 id="hidden" style="display:none">
+
+      <h3>Update Customer</h3>
+      <form action="AdminController/UpdateCustomer" method="get">
+        Customer Id
+        <br>
+        <input type="number" name="id">
+        <br>
+        <br> Password
+        <br>
+        <input type="text" name="password">
+
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Update" class="btn btn-info"  onclick="updateCustomerA()"/>
+
+      </form>
+      <br>
+    </div7>
+
+
+
+
+
+
+    <div8 id="hidden" style="display:none">
+
+      <h3>Delete Customer</h3>
+      <form action="AdminController/DeleteCustomer" method="get">
+        Customer Id
+        <br>
+        <input type="number" name="id">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Delete" class="btn btn-danger"  onclick="deleteCustomerA()"/>
+      </form>
+      <br>
+    </div8>
+
+
+
+
+
+
+    <div9 id="hidden" style="display:none">
+
+      <h3>Read Customer</h3>
+      <form action="AdminController/ReadCustomer" method="get">
+        Customer Id
+        <br>
+        <input type="number" name="id">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Read" class="btn btn-success" />
+      </form>
+      <br>
+    </div9>
+
+
+
+
+
+    <div10 id="hidden" style="display:none">
+
+      <h3>Read All Customers</h3>
+      <form action="AdminController/ReadAllCustomers" method="get">
+        <br>
+        <input type="submit" value="Read All" class="btn btn-success" />
+      </form>
+      <br>
+    </div10>
+
+    <br>
+
+
+    
+  </body>
+
+</html>

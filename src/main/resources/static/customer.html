@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button1").click(function () {
+        $("div1").slideToggle(1000);
+
+      });
+      
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button2").click(function () {
+        $("div2").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button3").click(function () {
+        $("div3").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button4").click(function () {
+        $("div4").slideToggle(1000);
+      });
+    });
+  </script>
+
+
+<script>
+  
+        function purchaseCouponA() {
+            alert("Coupon Was Purchased Successfully!");
+        }
+        
+        
+    
+          </script>
+ 
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  
+  <title>Customer Console</title>
+  <style>
+    div.c {
+      position: absolute;
+      right: 30px;
+    }
+  </style>
+</head>
+
+
+<div class="container-fluid">
+  <div class="navbar-header">
+  </div>
+
+  <div class="collapse navbar-collapse">
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" ><img src="icon.png"></a>
+    <ul class="navbar-nav">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Customer Services
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <button1>Purchase Coupon</button1>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button2>Read All Purchased Coupons</button2>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button3>Read All Purchased Coupons By Type</button3>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button4>Read All Purchased Coupons By Until Price</button4>
+          </a>
+          
+
+        </div>
+      </li>
+      
+      <div class="c">
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="CustomerController/LogOut" action="POST">Logout</a>
+
+        </li>
+      </div>
+    </ul>
+  </nav>
+
+
+
+  <div class="container-fluid" style="margin-top:80px">
+
+  </div>
+
+  <body>
+    <h3>Welcome Customer</h3>
+    Please Choose Your Options In The Navbar Above
+
+    <br>
+   
+
+    <div1 id="hidden" style="display:none">
+      <h3>Purchase Coupon</h3>
+      <form action="CustomerController/PurchaseCoupon" method="POST">
+        Coupon Id
+        <br>
+        <input type="number" name="id">
+      
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Purchase" class="btn btn-success"  onclick="purchaseCouponA()"/>
+
+      </form>
+      <br>
+    </div1>
+
+
+
+
+
+
+
+
+    <div2 id="hidden" style="display:none">
+
+      <h3>Read All Purchased Coupons</h3>
+      <form action="CustomerController/ReadAllPurchasedCoupons" method="get">
+    
+        <br>
+        <input type="submit" value="Read All" class="btn btn-success" />
+      </form>
+      <br>
+    </div2>
+
+
+
+    <div3 id="hidden" style="display:none">
+
+        <h3>Read All Purchased Coupons By Type</h3>
+        <form action="CustomerController/ReadAllPurchasedCouponsByType" method="get">
+         
+          Coupon Type<br>
+          <select name="type">
+           <option value="RESTAURANTS">RESTAURANTS</option>
+           <option value="ELECTRICITY">ELECTRICITY</option>
+           <option value="FOOD">FOOD</option>
+           <option value="HEALTH">HEALTH</option>
+           <option value="SPORTS">SPORTS</option>
+           <option value="CAMPING">CAMPING</option>
+           <option value="TRAVELLING">TRAVELLING</option>
+           <option value="COMPUTERS">COMPUTERS</option>
+           <option value="FASHION">FASHION</option>
+           <option value="GARDEN">GARDEN</option>
+           </select>
+          <br>
+          <br>
+          <input type="submit" value="Read All" class="btn btn-success" />
+        </form>
+        <br>
+      </div3>
+  
+  
+  
+      <div4 id="hidden" style="display:none">
+  
+        <h3>Read All Purchased Coupons By Until Price</h3>
+        <form action="CustomerController/ReadAllPurchasedCouponsByUntilPrice" method="get">
+        
+        
+          Coupon Until Price<br><input type="number" step="0.01" name="price">
+        
+          <br><br><br>
+          
+          <input type="submit" value="Read All" class="btn btn-success" />
+        </form>
+        <br>
+      </div4>
+      
+      
+  
+  
+    
+  </body>
+
+</html>
+
+
+
+    
+    
+    
+    
+  
+    
+    
+    
+
+
+
+
+
+
+
+
+

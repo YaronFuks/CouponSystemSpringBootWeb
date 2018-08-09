@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button1").click(function () {
+        $("div1").slideToggle(1000);
+
+      });
+      
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button2").click(function () {
+        $("div2").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button3").click(function () {
+        $("div3").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button4").click(function () {
+        $("div4").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button5").click(function () {
+        $("div5").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button6").click(function () {
+        $("div6").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button7").click(function () {
+        $("div7").slideToggle(1000);
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("button8").click(function () {
+        $("div8").slideToggle(1000);
+      });
+    });
+  </script>
+
+<script>
+  
+    function updateCouponA() {
+        alert("Coupon Was Updated Successfully!");
+    }
+      
+    function createCouponA() {
+        alert("Coupon Was Created Successfully!");
+    }
+    
+    function deleteCouponA() {
+        alert("Coupon Was Deleted Successfully!");
+    }
+    
+
+      </script>
+ 
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  
+  <title>Company Console</title>
+  <style>
+    div.c {
+      position: absolute;
+      right: 30px;
+    }
+  </style>
+</head>
+
+
+<div class="container-fluid">
+  <div class="navbar-header">
+  </div>
+
+  <div class="collapse navbar-collapse">
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" ><img src="icon.png"></a>
+    <ul class="navbar-nav">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Company Services
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <button1>Create Coupon</button1>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button2>Update Coupon</button2>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button3>Delete Coupon</button3>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button4>Read Coupon</button4>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button5>Read All Coupons</button5>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button6>Read All Coupons By Type</button6>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button7>Read All Coupons By Until Price</button7>
+          </a>
+          <a class="dropdown-item" href="#">
+            <button8>Read All Coupons By Until Date</button8>
+          </a>
+
+        </div>
+      </li>
+      
+      <div class="c">
+
+        <li class="nav-item">
+
+          <a class="nav-link" href="CompanyController/LogOut">Logout</a>
+
+        </li>
+      </div>
+    </ul>
+  </nav>
+
+
+
+  <div class="container-fluid" style="margin-top:80px">
+
+  </div>
+
+  <body>
+    <h3>Welcome Company Admin</h3>
+    Please Choose Your Options In The Navbar Above
+
+    <br>
+    <br>
+
+
+
+
+
+    <div1 id="hidden" style="display:none">
+      <h3>Create Coupon</h3>
+      <form action="CompanyController/CreateCoupon" method="post">
+        Coupon Title
+        <br>
+        <input type="text" name="title">
+        <br>
+        <br> Start Date
+        <br>
+        <input type="date" name="start_date">
+        <br>
+        <br> End Date
+        <br>
+        <input type="date" name="end_date" >
+        <br>
+        <br> Amount
+        <br>
+        <input type="number" name="amount" step="1">
+        <br>
+        <br> Coupon Type
+        <br>
+        <select name="type">
+          <option value="RESTAURANTS">RESTAURANTS</option>
+          <option value="ELECTRICITY">ELECTRICITY</option>
+          <option value="FOOD">FOOD</option>
+          <option value="HEALTH">HEALTH</option>
+          <option value="SPORTS">SPORTS</option>
+          <option value="CAMPING">CAMPING</option>
+          <option value="TRAVELLING">TRAVELLING</option>
+          <option value="COMPUTERS">COMPUTERS</option>
+          <option value="FASHION">FASHION</option>
+          <option value="GARDEN">GARDEN</option>
+          </select>
+        <br>
+        <br> Message
+        <br>
+        <input type="text" name="message">
+        <br>
+        <br> Price
+        <br>
+        <input type="number" step="0.01" name="price">
+        <br>
+        <br> Image Url
+        <br>
+        <input type="text" name="image">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Create" class="btn btn-success" onclick="createCouponA()" />
+
+
+      </form>
+      <br>
+    </div1>
+
+
+
+
+
+    <div2 id="hidden" style="display:none">
+      <h3>Update Coupon</h3>
+      <form action="CompanyController/UpdateCoupon" method="get">
+        Coupon Id
+        <br>
+        <input type="text" name="id">
+        <br>
+        <br> End Date
+        <br>
+        <input type="date" name="end_date">
+        <br>
+        <br> Price
+        <br>
+        <input type="number" step="0.01" name="price">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Update" class="btn btn-info"  onclick="updateCouponA()" />
+
+      </form>
+      <br>
+    </div2>
+
+
+
+
+
+
+
+
+    <div3 id="hidden" style="display:none">
+
+      <h3>Delete Coupon</h3>
+      <form action="CompanyController/DeleteCoupon" method="get">
+        Coupon Id
+        <br>
+        <input type="text" name="id">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Delete" class="btn btn-danger"  onclick="deleteCouponA()"/>
+      </form>
+      <br>
+    </div3>
+
+
+
+
+
+
+    <div4 id="hidden" style="display:none">
+
+      <h3>Read Coupon</h3>
+      <form action="CompanyController/ReadCoupon" method="get">
+        Coupon Id
+        <br>
+        <input type="text" name="id">
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Read" class="btn btn-success" />
+      </form>
+      <br>
+    </div4>
+
+
+
+
+
+    <div5 id="hidden" style="display:none">
+
+      <h3>Read All Coupons</h3>
+      <form action="CompanyController/ReadAllCoupons" method="get">
+        <br>
+        <input type="submit" value="Read All" class="btn btn-success" />
+      </form>
+      <br>
+    </div5>
+
+
+    <div6 id="hidden" style="display:none">
+
+      <h3>Read All Coupons By Type</h3>
+      <form action="CompanyController/ReadAllCouponsByType" method="get">
+       
+        Coupon Type<br>
+        <select name="type">
+         <option value="RESTAURANTS">RESTAURANTS</option>
+         <option value="ELECTRICITY">ELECTRICITY</option>
+         <option value="FOOD">FOOD</option>
+         <option value="HEALTH">HEALTH</option>
+         <option value="SPORTS">SPORTS</option>
+         <option value="CAMPING">CAMPING</option>
+         <option value="TRAVELLING">TRAVELLING</option>
+         <option value="COMPUTERS">COMPUTERS</option>
+         <option value="FASHION">FASHION</option>
+         <option value="GARDEN">GARDEN</option>
+         </select>
+        <br>
+        <br>
+        <input type="submit" value="Read All" class="btn btn-success" />
+      </form>
+      <br>
+    </div6>
+
+
+
+    <div7 id="hidden" style="display:none">
+
+      <h3>Read All Coupons By Until Price</h3>
+      <form action="CompanyController/ReadAllCouponsByUntilPrice" method="get">
+        <br>
+      
+        Coupon Until Price<br><input type="number" step="0.01" name="price">
+      
+        <br><br><br>
+        
+        <input type="submit" value="Read All" class="btn btn-success" />
+      </form>
+      <br>
+    </div7>
+    
+    
+        <div8 id="hidden" style="display:none">
+    
+          <h3>Read All Coupons By Until Date</h3>
+          <form action="CompanyController/ReadAllCouponsByUntilDate" method="get">
+            <br>
+          
+            End Date<br> <input type="date" name="end_date">
+          
+            <br><br><br>
+            
+            <input type="submit" value="Read All" class="btn btn-success" />
+          </form>
+          <br>
+        </div8>
+
+
+
+
+
+
+    
+  </body>
+
+</html>
+
+
+
+    
+    
+    
+    
+  
+    
+    
+    
